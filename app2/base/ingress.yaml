@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-world-demo-ingress
+  labels:
+    name: hello-world-demo-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: /heckle
+        backend:
+          service:
+            name: hello-world-demo-service
+            port: 
+              number: 80
