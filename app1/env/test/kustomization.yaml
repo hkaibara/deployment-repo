@@ -3,11 +3,6 @@ kind: Kustomization
 #namespace: test
 resources:
 - ../../base
-patches:
-- path: ingress-patch.json
-  target:
-    kind: Ingress
-    name: hello-world-demo-ingress
 images:
 - name: app-test
   newName:  214084917052.dkr.ecr.ap-northeast-1.amazonaws.com/app-test
