@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-demo
+spec:
+  selector:
+    matchLabels:
+      app: hello-world-demo
+  template:
+    metadata:
+      labels:
+        app: hello-world-demo
+    spec:
+      containers:
+      - name: hello-world-demo
+        image: motmot84/hello-world:1
+        imagePullSecrets:
+          - name: pull-secret
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+        env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: DEVELOPMENT
+          - name: ASPNETCORE_URLS
+            value: http://+:8080
+        volumeMounts:
+          - mountPath: /app/appsettings.json
+            name: hello-world-demo-app-settings
+            subPath: appsettings.json
+      volumes:
+        - name: hello-world-demo-app-settings
+          configMap: 
+            name: hello-world-demo-config
+
