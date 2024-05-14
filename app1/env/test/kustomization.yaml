@@ -9,5 +9,7 @@ patches:
     kind: Ingress
     name: hello-world-demo-ingress
 images:
+- name: app-test
+  newTag: e0f63078c45a147a4a6c02830b573eea72e73de9
 - name: hello-world-demo
   newTag: v1.0
