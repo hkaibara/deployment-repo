@@ -1,38 +1,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-demo
+  name: app-test
 spec:
   selector:
     matchLabels:
-      app: hello-world-demo
+      app: app-test
   template:
     metadata:
       labels:
-        app: hello-world-demo
+        app: app-test
     spec:
       containers:
-      - name: hello-world-demo
-        image: motmot84/hello-world:1
-        imagePullSecrets:
-          - name: pull-secret
+      - name: app-test
+        image: 214084917052.dkr.ecr.ap-northeast-1.amazonaws.com/app-test:latest
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
         - containerPort: 8080
-        env:
-          - name: ASPNETCORE_ENVIRONMENT
-            value: DEVELOPMENT
-          - name: ASPNETCORE_URLS
-            value: http://+:8080
-        volumeMounts:
-          - mountPath: /app/appsettings.json
-            name: hello-world-demo-app-settings
-            subPath: appsettings.json
-      volumes:
-        - name: hello-world-demo-app-settings
-          configMap: 
-            name: hello-world-demo-config
+      #   env:
+      #     - name: ASPNETCORE_ENVIRONMENT
+      #       value: DEVELOPMENT
+      #     - name: ASPNETCORE_URLS
+      #       value: http://+:8080
+      #   volumeMounts:
+      #     - mountPath: /app/appsettings.json
+      #       name: app-test-app-settings
+      #       subPath: appsettings.json
+      # volumes:
+      #   - name: app-test-app-settings
+      #     configMap: 
+      #       name: app-test-config
 

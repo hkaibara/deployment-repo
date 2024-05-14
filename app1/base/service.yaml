@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world-demo-service
+  name: app-test-service
 spec:
   type: ClusterIP
   selector:
-    app: hello-world-demo
+    app: app-test
   ports:
   - port: 80
     targetPort: 8080

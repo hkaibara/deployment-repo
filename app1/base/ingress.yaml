@@ -1,9 +1,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hello-world-demo-ingress
+  name: app-test-ingress
   labels:
-    name: hello-world-demo-ingress
+    name: app-test-ingress
 spec:
   ingressClassName: nginx
   rules:
@@ -13,6 +13,6 @@ spec:
         path: /heckle
         backend:
           service:
-            name: hello-world-demo-service
+            name: app-test-service
             port: 
               number: 80
