@@ -7,3 +7,5 @@ images:
 - name: app-test
   newName: 214084917052.dkr.ecr.ap-northeast-1.amazonaws.com/app-test
   newTag: a01d1a483ebac04562d7c5621b758c0330772b90
+- name: hkaibara/app-test
+  newTag: 1a798fa82727dae6cacb58f07c26c7a80557630f
