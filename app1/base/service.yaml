@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: app-test-service
+  name: appv1-service
 spec:
   type: ClusterIP
   selector:
-    app: app-test
+    app: appv1
   ports:
   - port: 80
     targetPort: 5000

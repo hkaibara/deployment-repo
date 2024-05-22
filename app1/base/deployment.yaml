@@ -5,15 +5,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: app-test
+      app: appv1
   template:
     metadata:
       labels:
-        app: app-test
+        app: appv1
     spec:
       containers:
-      - name: app-test
-        image: app-test
+      - name: appv1
+        image: app
         resources:
           limits:
             memory: "128Mi"
