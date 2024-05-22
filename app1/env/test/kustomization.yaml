@@ -5,4 +5,5 @@ resources:
 - ../../base
 images:
 - name: app-test
-  newTag: e16d6eda04663455f2a738cfac1a953efa99e3b3
+  newName: 214084917052.dkr.ecr.ap-northeast-1.amazonaws.com/app-test
+  newTag: 37f5ef53046fe42bdbf44efa441e306a68e52b41
