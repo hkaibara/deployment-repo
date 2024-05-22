@@ -5,4 +5,4 @@ resources:
 - ../../base
 images:
 - name: app-test
-  newTag: 46a588be1e500fa6948c2e72642ea83047348f79
+  newTag: 93930cd56e7521f73fca4b9e1f42022e816cc683
