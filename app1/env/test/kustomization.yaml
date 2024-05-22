@@ -6,4 +6,4 @@ resources:
 images:
 - name: appv1
   newName: 214084917052.dkr.ecr.ap-northeast-1.amazonaws.com/app-test
-  newTag: aa7c6c3a0ad96550085e059fee7dc526df5600cd
+  newTag: 37f5ef53046fe42bdbf44efa441e306a68e52b41
