@@ -6,4 +6,4 @@ resources:
 images:
 - name: appv1
   newName: 214084917052.dkr.ecr.ap-northeast-1.amazonaws.com/app-prod
-  newTag: 963544dcc18927db807eccf9f32b64fdd50e3eed
+  newTag: 1defbbe31c60639d7727ff9b0523207450749252
