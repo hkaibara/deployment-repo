@@ -1,15 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: app-test-config
+  name: app-env-vars
 data:
-  appsettings.json: |
-    {
-      "Logging": {
-        "LogLevel": {
-          "Default": "Information",
-          "Microsoft.AspNetCore": "Warning"
-        }
-      },
-      "AllowedHosts": "*"
-    }
+  env_var1: default_var2
+  env_var2: default_var2

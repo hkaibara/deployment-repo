@@ -1,0 +1,12 @@
+[
+    {
+        "op": "replace",
+        "path": "/data/env_var1",
+        "value": "dev_var1"
+    },
+    {
+        "op": "replace",
+        "path": "/data/env_var2",
+        "value": "dev_var2"
+    }
+]
